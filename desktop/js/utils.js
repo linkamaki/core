@@ -912,6 +912,9 @@ function normTextLower(_text) {
 }
 
 function linkify(inputText) {
+  if(!inputText || inputText == '' || inputText === null){
+    return '';
+  }
   var replacePattern1 = /(\b(https?|ftp):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gim;
   var replacedText = inputText.replace(replacePattern1, '<a href="$1" target="_blank">$1</a>');
   var replacePattern2 = /(^|[^\/])(www\.[\S]+(\b|$))/gim;
