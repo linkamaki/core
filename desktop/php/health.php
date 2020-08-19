@@ -186,7 +186,7 @@ foreach (plugin::listPlugin(true) as $plugin) {
 		<div class="panel-heading">
 			<h3 class="panel-title cursor">
 				<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionHealth" href="#health_jeedom">
-					<i class="icon divers-caduceus3 success" style="font-size:22px;"></i> <span style="font-size:18px;">{{Santé de Jeedom}}</span></a>
+					<i class="icon divers-caduceus3 success" style="font-size:22px;"></i> <span style="font-size:18px;">{{Santé de}} <?php echo config::byKey('product_name') ?></span></a>
 					<i id="bt_benchmarkJeedom" class="fas fa-tachometer-alt pull-right cursor" title="Benchmark Jeedom"></i>
 				</h3>
 			</div>
