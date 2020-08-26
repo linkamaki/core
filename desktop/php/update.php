@@ -74,8 +74,8 @@ if (!isConnect('admin')) {
 <div id="md_specifyUpdate" style="overflow-x: hidden;">
 	<form class="form-horizontal">
 		<fieldset>
-			<div class="alert alert-danger">
-				{{Avant toute mise à jour, merci de consulter}} <a class="warning" style="color:var(--al-warning-color)!important" target="_blank" href="https://jeedom.github.io/core/fr_FR/noteVersion">{{la note de version}}</a> {{du core de Jeedom}}.
+			<div class="alert alert-warning">
+				{{Avant toute mise à jour, merci de consulter le}} <span id="bt_changelogCore" class="label cursor alert-info">{{changelog}}</span> {{du Core}}.
 			</div>
 			<div class="form-group">
 				<div class="form-group">
