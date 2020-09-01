@@ -144,6 +144,7 @@ class config {
 		AND plugin=:plugin';
 		$value = DB::Prepare($sql, $values, DB::FETCH_TYPE_ROW);
 		if ($value['value'] === '' || $value['value'] === null) {
+			$defaultConfiguration = self::getDefaultConfiguration($_plugin);
 			if (isset($defaultConfiguration[$_plugin][$_key])) {
 				self::$cache[$_plugin . '::' . $_key] = $defaultConfiguration[$_plugin][$_key];
 			}else if ($_default !== '') {
