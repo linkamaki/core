@@ -274,7 +274,7 @@ try {
 					$dateStart = date('Y-m-d H:i:s', strtotime('- ' . init('dateRange') . ' ' . $dateEnd));
 				}
 			}
-			
+
 			if (init('dateStart') != '') {
 				$dateStart = init('dateStart');
 			}
@@ -287,11 +287,16 @@ try {
 			if (strtotime($dateEnd) > strtotime('now')) {
 				$dateEnd = date('Y-m-d H:i:s');
 			}
-			
-			if ($dateStart == '') {
+
+			if ($dateStart == '' && init('dateRange') == '') {
 				$dateStart =  init('startDate', date('Y-m-d', strtotime(config::byKey('history::defautShowPeriod') . ' ' . date('Y-m-d'))));
 			}
-			
+
+			if ($dateStart == '' && init('dateRange') != 'all') {
+				$now = date('Y-m-d');
+				$dateStart = $now->modify('- '.init('dateRange'));
+			}
+
 			$return['maxValue'] = '';
 			$return['minValue'] = '';
 			if ($dateStart === null) {
@@ -304,7 +309,7 @@ try {
 			} else {
 				$return['dateEnd'] = $dateEnd;
 			}
-			
+
 			if (is_numeric(init('id'))) {
 				$cmd = cmd::byId(init('id'));
 				if (!is_object($cmd)) {
@@ -314,13 +319,14 @@ try {
 				if (!$eqLogic->hasRight('r')) {
 					throw new Exception(__('Vous n\'êtes pas autorisé à faire cette action', __FILE__));
 				}
-				$groupingType=init('groupingType');
-				if($groupingType == ''){
-					$groupingType = $cmd->getDisplay('groupingType');
-				}
 				$derive = init('derive', $cmd->getDisplay('graphDerive'));
 				if (trim($derive) == '') {
 					$derive = $cmd->getDisplay('graphDerive');
+				}
+				$return['derive'] = $derive;
+				$groupingType=init('groupingType');
+				if($groupingType == ''){
+					$groupingType = $cmd->getDisplay('groupingType');
 				}
 				if($derive){
 					$groupingType = '';
@@ -333,14 +339,10 @@ try {
 				$return['eqLogic'] = utils::o2a($cmd->getEqLogic());
 				$return['timelineOnly'] = $JEEDOM_INTERNAL_CONFIG['cmd']['type']['info']['subtype'][$cmd->getSubType()]['isHistorized']['timelineOnly'];
 				$previousValue = null;
-				$return['derive'] = $derive;
+
 				foreach ($histories as $history) {
 					$info_history = array();
-					if($cmd->getDisplay('groupingType') != ''){
-						$info_history[] = floatval(strtotime($history->getDatetime() . " UTC")) * 1000 - 1;
-					}else{
-						$info_history[] = floatval(strtotime($history->getDatetime() . " UTC")) * 1000;
-					}
+					$info_history[] = floatval(strtotime($history->getDatetime() . " UTC")) * 1000;
 					if ($JEEDOM_INTERNAL_CONFIG['cmd']['type']['info']['subtype'][$cmd->getSubType()]['isHistorized']['timelineOnly']) {
 						$value = $history->getValue();
 					} else {
