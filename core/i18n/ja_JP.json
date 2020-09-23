@@ -1702,7 +1702,7 @@
     },
     "desktop\/php\/dashboard.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
-        "Aucun objet racine trouvé. Pour en créer un, allez dans Outils -> Objets.<br\/> Si vous ne savez pas quoi faire, n\\'hésitez pas à consulter cette <a href=\"https:\/\/jeedom.github.io\/documentation\/premiers-pas\/fr_FR\/index\" target=\"_blank\">page<\/a> et celle-là si vous avez un pack : <a href=\"https:\/\/jeedom.com\/start\" target=\"_blank\">page<\/a>": "ルートオブジェクトが見つかりません。作成するには、[ツール]-> [オブジェクト]に移動します。 <br\/>どうすればいいかわからない場合は、この<a href=\"https:\/\/jeedom.github.io\/documentation\/premiers-pas\/fr_FR\/index\" target=\"_blank\">ページ<\/a>と、パックがある場合はこの<a href=\"https:\/\/jeedom.github.io\/documentation\/premiers-pas\/fr_FR\/index\" target=\"_blank\">ページ<\/a>を<a href=\"https:\/\/jeedom.com\/start\" target=\"_blank\">参照してください。<\/a>",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Outils -> Objets.<br\/> Pour plus d\\'informations, n\\'hésitez pas à consulter cette <a href=\"https:\/\/doc.jeedom.com\/fr_FR\/premiers-pas\/\" target=\"_blank\">documentation<\/a>. Si vous avez un Pack Jeedom Smart : <a href=\"https:\/\/start.jeedom.com\/\" target=\"_blank\">Guide démarrage Smart<\/a>": "",
         "Rechercher": "検索する",
         "Afficher\/Masquer les objets": "表示\/非表示のオブジェクト",
         "Afficher\/Masquer les résumés": "サマリーの表示\/非表示",

@@ -1702,7 +1702,7 @@
     },
     "desktop\/php\/dashboard.php": {
         "401 - Accès non autorisé": "401 - Acesso não autorizado",
-        "Aucun objet racine trouvé. Pour en créer un, allez dans Outils -> Objets.<br\/> Si vous ne savez pas quoi faire, n\\'hésitez pas à consulter cette <a href=\"https:\/\/jeedom.github.io\/documentation\/premiers-pas\/fr_FR\/index\" target=\"_blank\">page<\/a> et celle-là si vous avez un pack : <a href=\"https:\/\/jeedom.com\/start\" target=\"_blank\">page<\/a>": "Nenhum objeto raiz encontrado. Para criar um, vá em Ferramentas -> Objetos. <br\/> Se você não sabe o que fazer, don \\ 't hesite em visitar esta <a href=\"https:\/\/jeedom.github.io\/documentation\/premiers-pas\/fr_FR\/index\" target=\"_blank\">página<\/a> e este se você tiver um pack: <a href=\"https:\/\/jeedom.com\/start\" target=\"_blank\">página<\/a>",
+        "Aucun objet racine trouvé. Pour en créer un, allez dans Outils -> Objets.<br\/> Pour plus d\\'informations, n\\'hésitez pas à consulter cette <a href=\"https:\/\/doc.jeedom.com\/fr_FR\/premiers-pas\/\" target=\"_blank\">documentation<\/a>. Si vous avez un Pack Jeedom Smart : <a href=\"https:\/\/start.jeedom.com\/\" target=\"_blank\">Guide démarrage Smart<\/a>": "Nenhum objeto raiz encontrado. Para criar um, vá para Ferramentas -> Objetos. <br\/> Para mais informações, não hesite em consultar esta <a href=\"https:\/\/doc.jeedom.com\/fr_FR\/premiers-pas\/\" target=\"_blank\">documentação<\/a> . Se você tiver um Jeedom Smart Pack: <a href=\"https:\/\/start.jeedom.com\/\" target=\"_blank\">Guia de início inteligente<\/a>",
         "Rechercher": "Pesquisar",
         "Afficher\/Masquer les objets": "Show \/ Hide Objects",
         "Afficher\/Masquer les résumés": "Mostrar \/ ocultar resumos",
