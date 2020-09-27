@@ -24,7 +24,7 @@ apt_install() {
 }
 
 mysql_sql() {
-  echo "$@" | mysql -uroot -p${MYSQL_ROOT_PASSWD}
+  echo "$@" | mysql -u root -p${MYSQL_ROOT_PASSWD}
   if [ $? -ne 0 ]; then
     echo "C${ROUGE}Ne peut exécuter $@ dans MySQL - Annulation${NORMAL}"
     exit 1
